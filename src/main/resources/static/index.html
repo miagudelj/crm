@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mia Gudelj"/>
+    <meta name="copyright" content="Mia Gudelj"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titel</title>
-  </head>
-  <body>
-		<h1>helooooo<h1>
-  </body>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" crossorigin="anonymous">
+
+    <script src="./js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="./js/editTermine.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/js.cookie.js"></script>
+
+    <title>Alle Tiere</title>
+</head>
+
+<body class="termine">
+<header>
+    <div class="col-sm-12">
+        <h1>Meine Termine</h1>
+    </div>
+
+    <nav class="navbar navbar-expand-sm ">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link disabled" id="userRole" href="#"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" id="message" href="#"></a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button type="button" class="btn" id="logout">Logout</button>
+        </form>
+    </nav>
+</header>
+
+<content>
+    <div class="container">
+        <div class="container">
+            <form id='terminForm'>
+                <table class="table table-striped" id="termine">
+                    <thead>
+                    <tr>
+                        <th scope="col">Beschreibung</th>
+                        <th scope="col">Datum</th>
+                        <th scope="col">Username</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+                <div class="form-group row">
+                    <a role="button" class="btn col-sm-1.5" href="./editTermin.html">Neuer Termin</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</content>
+</body>
 </html>

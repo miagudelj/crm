@@ -1395,71 +1395,6 @@
     <modelElement href="crm.uml#_1cGhgeScEeujgLxI16OmOA"/>
     <visualProperties xmi:id="_MG1XkeSeEeujgLxI16OmOA" position="1449.0,432.0" size="-1.0,-1.0"/>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_1owdcOScEeujgLxI16OmOA" containment="_MeykkOSeEeujgLxI16OmOA" name="UserDetailsServiceImpl" package="_Mgl7YOSeEeujgLxI16OmOA" associationsOut="_1ouoQOScEeujgLxI16OmOA" generalizations="_1ovPUOScEeujgLxI16OmOA">
-    <modelElement href="crm.uml#_1dlIMOScEeujgLxI16OmOA"/>
-    <visualProperties xmi:id="_1owdceScEeujgLxI16OmOA" position="2727.0,1606.0" size="-1.0,-1.0"/>
-    <stereotypes xmi:id="_1owdcuScEeujgLxI16OmOA" name="LegacyStyledElement">
-      <modelElement href="crm.uml#_1dlvQOScEeujgLxI16OmOA"/>
-    </stereotypes>
-    <stereotypes xmi:id="_1owdc-ScEeujgLxI16OmOA" name="Annotations">
-      <modelElement href="crm.uml#_1dm9YOScEeujgLxI16OmOA"/>
-    </stereotypes>
-    <visibility xmi:id="_1owddOScEeujgLxI16OmOA" label="+"/>
-    <attributes xmi:id="_1owddeScEeujgLxI16OmOA" name="userRepository">
-      <modelElement href="crm.uml#_1kBHYuScEeujgLxI16OmOA"/>
-      <stereotypes xmi:id="_-s3iQOScEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_-s4JUOScEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_-s-P8OScEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_hZddIOSdEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_hZddIeSdEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_hZi8sOSdEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_G0sIgOSeEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_G0svkOSeEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_G0zdQOSeEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_pMklYOSjEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_pMlMcOSjEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_pMqsAOSjEeujgLxI16OmOA" name="Annotations"/>
-      <stereotypes xmi:id="_ci4uwuSoEeuYMPFngiEdSw" name="Annotations"/>
-      <stereotypes xmi:id="_ci4uw-SoEeuYMPFngiEdSw" name="Annotations"/>
-      <stereotypes xmi:id="_cjB4suSoEeuYMPFngiEdSw" name="Annotations"/>
-      <stereotypes xmi:id="_UXiMAuSqEeueHqUQJ_UNdw" name="Annotations"/>
-      <stereotypes xmi:id="_UXiMA-SqEeueHqUQJ_UNdw" name="Annotations"/>
-      <stereotypes xmi:id="_UXr9A-SqEeueHqUQJ_UNdw" name="Annotations"/>
-      <stereotypes xmi:id="_4iGEQuSrEeuT-t9ZMJiLzQ" name="Annotations"/>
-      <stereotypes xmi:id="_4iGEQ-SrEeuT-t9ZMJiLzQ" name="Annotations"/>
-      <stereotypes xmi:id="_4iPONeSrEeuT-t9ZMJiLzQ" name="Annotations"/>
-      <stereotypes xmi:id="_hEUIwOU7EeuoYbq2-P3JhQ" name="Annotations"/>
-      <stereotypes xmi:id="_hEUv0OU7EeuoYbq2-P3JhQ" name="Annotations"/>
-      <stereotypes xmi:id="_hEa2cOU7EeuoYbq2-P3JhQ" name="Annotations"/>
-      <visibility xmi:id="_1owdd-ScEeujgLxI16OmOA" label="~"/>
-      <cardinality xmi:id="_1owdeOScEeujgLxI16OmOA" label="1" max="1" min="1"/>
-      <type xmi:id="_1owdeeScEeujgLxI16OmOA" name="UserRepository">
-        <modelElement href="crm.uml#_1dUCcOScEeujgLxI16OmOA"/>
-      </type>
-    </attributes>
-    <operations xmi:id="_1owdeuScEeujgLxI16OmOA" name="loadUserByUsername">
-      <modelElement href="crm.uml#_1dlvQeScEeujgLxI16OmOA"/>
-      <visualProperties xmi:id="__Nj_EuSdEeujgLxI16OmOA"/>
-      <stereotypes xmi:id="_1owde-ScEeujgLxI16OmOA" name="Annotations">
-        <modelElement href="crm.uml#_1dmWUeScEeujgLxI16OmOA"/>
-      </stereotypes>
-      <visibility xmi:id="_1owdfOScEeujgLxI16OmOA" label="+"/>
-      <cardinality xmi:id="_1owdfeScEeujgLxI16OmOA" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_1owdfuScEeujgLxI16OmOA">
-        <modelElement href="crm.uml#_1jcfoOScEeujgLxI16OmOA"/>
-        <type xmi:id="_1owdf-ScEeujgLxI16OmOA" name="UserDetails">
-          <modelElement href="crm.uml#_1gsGkuScEeujgLxI16OmOA"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_1owdgOScEeujgLxI16OmOA" name="username">
-        <modelElement href="crm.uml#_1dmWUOScEeujgLxI16OmOA"/>
-        <cardinality xmi:id="_1owdgeScEeujgLxI16OmOA" label="1" max="1" min="1"/>
-        <type xmi:id="_1owdguScEeujgLxI16OmOA" name="String">
-          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </type>
-      </parameters>
-    </operations>
-  </nodes>
   <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_1n46wuScEeujgLxI16OmOA" containment="_MBEt0OSeEeujgLxI16OmOA" name="CrmApplication" package="_MBasEOSeEeujgLxI16OmOA">
     <modelElement href="crm.uml#_1cyeAOScEeujgLxI16OmOA"/>
     <visualProperties xmi:id="_1n46w-ScEeujgLxI16OmOA" position="3566.0,457.0" size="-1.0,-1.0"/>
@@ -1826,6 +1761,71 @@
           <modelElement href="crm.uml#_1c9dJuScEeujgLxI16OmOA"/>
         </type>
       </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_1owdcOScEeujgLxI16OmOA" containment="_MeykkOSeEeujgLxI16OmOA" name="UserDetailsServiceImpl" package="_Mgl7YOSeEeujgLxI16OmOA" associationsOut="_1ouoQOScEeujgLxI16OmOA" generalizations="_1ovPUOScEeujgLxI16OmOA">
+    <modelElement href="crm.uml#_1dlIMOScEeujgLxI16OmOA"/>
+    <visualProperties xmi:id="_1owdceScEeujgLxI16OmOA" position="2727.0,1606.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_1owdcuScEeujgLxI16OmOA" name="LegacyStyledElement">
+      <modelElement href="crm.uml#_1dlvQOScEeujgLxI16OmOA"/>
+    </stereotypes>
+    <stereotypes xmi:id="_1owdc-ScEeujgLxI16OmOA" name="Annotations">
+      <modelElement href="crm.uml#_1dm9YOScEeujgLxI16OmOA"/>
+    </stereotypes>
+    <visibility xmi:id="_1owddOScEeujgLxI16OmOA" label="+"/>
+    <attributes xmi:id="_1owddeScEeujgLxI16OmOA" name="userRepository">
+      <modelElement href="crm.uml#_1kBHYuScEeujgLxI16OmOA"/>
+      <stereotypes xmi:id="_-s3iQOScEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_-s4JUOScEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_-s-P8OScEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_hZddIOSdEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_hZddIeSdEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_hZi8sOSdEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_G0sIgOSeEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_G0svkOSeEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_G0zdQOSeEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_pMklYOSjEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_pMlMcOSjEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_pMqsAOSjEeujgLxI16OmOA" name="Annotations"/>
+      <stereotypes xmi:id="_ci4uwuSoEeuYMPFngiEdSw" name="Annotations"/>
+      <stereotypes xmi:id="_ci4uw-SoEeuYMPFngiEdSw" name="Annotations"/>
+      <stereotypes xmi:id="_cjB4suSoEeuYMPFngiEdSw" name="Annotations"/>
+      <stereotypes xmi:id="_UXiMAuSqEeueHqUQJ_UNdw" name="Annotations"/>
+      <stereotypes xmi:id="_UXiMA-SqEeueHqUQJ_UNdw" name="Annotations"/>
+      <stereotypes xmi:id="_UXr9A-SqEeueHqUQJ_UNdw" name="Annotations"/>
+      <stereotypes xmi:id="_4iGEQuSrEeuT-t9ZMJiLzQ" name="Annotations"/>
+      <stereotypes xmi:id="_4iGEQ-SrEeuT-t9ZMJiLzQ" name="Annotations"/>
+      <stereotypes xmi:id="_4iPONeSrEeuT-t9ZMJiLzQ" name="Annotations"/>
+      <stereotypes xmi:id="_hEUIwOU7EeuoYbq2-P3JhQ" name="Annotations"/>
+      <stereotypes xmi:id="_hEUv0OU7EeuoYbq2-P3JhQ" name="Annotations"/>
+      <stereotypes xmi:id="_hEa2cOU7EeuoYbq2-P3JhQ" name="Annotations"/>
+      <visibility xmi:id="_1owdd-ScEeujgLxI16OmOA" label="~"/>
+      <cardinality xmi:id="_1owdeOScEeujgLxI16OmOA" label="1" max="1" min="1"/>
+      <type xmi:id="_1owdeeScEeujgLxI16OmOA" name="UserRepository">
+        <modelElement href="crm.uml#_1dUCcOScEeujgLxI16OmOA"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_1owdeuScEeujgLxI16OmOA" name="loadUserByUsername">
+      <modelElement href="crm.uml#_1dlvQeScEeujgLxI16OmOA"/>
+      <visualProperties xmi:id="__Nj_EuSdEeujgLxI16OmOA"/>
+      <stereotypes xmi:id="_1owde-ScEeujgLxI16OmOA" name="Annotations">
+        <modelElement href="crm.uml#_1dmWUeScEeujgLxI16OmOA"/>
+      </stereotypes>
+      <visibility xmi:id="_1owdfOScEeujgLxI16OmOA" label="+"/>
+      <cardinality xmi:id="_1owdfeScEeujgLxI16OmOA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_1owdfuScEeujgLxI16OmOA">
+        <modelElement href="crm.uml#_1jcfoOScEeujgLxI16OmOA"/>
+        <type xmi:id="_1owdf-ScEeujgLxI16OmOA" name="UserDetails">
+          <modelElement href="crm.uml#_1gsGkuScEeujgLxI16OmOA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_1owdgOScEeujgLxI16OmOA" name="username">
+        <modelElement href="crm.uml#_1dmWUOScEeujgLxI16OmOA"/>
+        <cardinality xmi:id="_1owdgeScEeujgLxI16OmOA" label="1" max="1" min="1"/>
+        <type xmi:id="_1owdguScEeujgLxI16OmOA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
     </operations>
   </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

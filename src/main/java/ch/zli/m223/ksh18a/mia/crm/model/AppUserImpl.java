@@ -39,6 +39,7 @@ public class AppUserImpl implements AppUser {
 	@ElementCollection(fetch = FetchType.EAGER)
 	// For simple types only, no Role objects allowed
 	private Set<String> roles;
+	private Set<Termin> termine;
 
 	
 	/**
@@ -47,10 +48,11 @@ public class AppUserImpl implements AppUser {
 	 * @param userName
 	 * @param password
 	 */
-	public AppUserImpl(String userName, String password, List<String> roles) {
+	public AppUserImpl(String userName, String password, List<String> roles, List<Termin> termine) {
 		this.userName = userName;
 		this.setPassword(password);
 		this.setRoles(roles);
+		this.setTermine(termine);
 	} // end of AppUserImpl
 	
 	/**
@@ -95,6 +97,13 @@ public class AppUserImpl implements AppUser {
 		return new ArrayList<String>(roles);
 	}
 
+	@Override
+	public List<Termin> getTermine() {
+		// TODO Auto-generated method stub
+		return new ArrayList<Termin>(termine);
+	}
+
+
 	/**
 	 * set password of user 
 	 * encode and hash it
@@ -117,6 +126,15 @@ public class AppUserImpl implements AppUser {
 		this.roles = new HashSet<>(roles);
 		return this;
 	} // end of setRoles
-
-
+	 
+	/** 
+	  * sets roles of the user into a hash
+	  * 
+	  * @param roles
+	  * @return userImplementation
+	  */
+	public AppUserImpl setTermine(List<Termin> termine) {
+		this.termine = new HashSet<>(termine);
+		return this;
+	} // end of setRoles
 }

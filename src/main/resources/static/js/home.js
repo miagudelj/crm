@@ -8,9 +8,6 @@
 
 $(document).ready(
     function () {
-		$("#prospects_form").submit(function(e) {
-    		e.preventDefault();
-		});
 		
         loadTermine();
 
@@ -37,7 +34,7 @@ function loadTermine() {
 
     .fail(function (xhr, status, errorThrown) {
         if (xhr.status == 403) {
-            window.location.href("./index.html");
+          /*  window.location.href("./index.html");*/
         } else if (xhr.status == 404) {
             $("#message").text("keine termine vorhanden");
         }else {
@@ -46,14 +43,14 @@ function loadTermine() {
     })
 }
 
-function showTiere(tierData) {
+function showTermine(terminData) {
 
     $("#message").empty();
     $("#home > tbody").html("");
 
     var tableData = "";
 
-    $.each(tableData, function (terminId, termin) {
+    $.each(terminData, function (terminId, termin) {
 
         tableData += `<tr>`;
         tableData += `<td> ${termin.beschreibung}</td>`;

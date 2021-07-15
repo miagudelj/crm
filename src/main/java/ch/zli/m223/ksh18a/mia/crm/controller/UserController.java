@@ -38,7 +38,7 @@ public class UserController {
 	 * 
 	 * @return list of all users
 	 */
-	@GetMapping("")
+	@GetMapping("/list")
 	public List<UserDto> getAllUsers() {
 		// List<UserDto> res = new ArrayList<>();
 		// res.add(new UserDto("user1"));
@@ -53,12 +53,13 @@ public class UserController {
 	 * @param userInput
 	 * @return new user into userService
 	 */
-	@PostMapping("")
-	public UserDto insertUser(@RequestBody UserInputDto userInput) {
+	@PostMapping("/create")
+	public UserDto createUser(@RequestBody UserInputDto userInput) {
 		return (UserDto) userService.addUser(
 				userInput.userName, 
 				userInput.password,
-				userInput.roles);
+				userInput.roles,
+				userInput.termine);
 		// TODO
 	}
 
@@ -68,8 +69,8 @@ public class UserController {
 	 * @param userId
 	 * @return
 	 */
-	@DeleteMapping("/{id}")
-	public UserDto deleteUserById(@PathVariable("id") long userId) {
+	@DeleteMapping("delete/{userId}")
+	public UserDto deleteUserById(@PathVariable("userId") long userId) {
 
 		return new UserDto(userService.getUserById(userId));
 	}
@@ -79,8 +80,8 @@ public class UserController {
 	 * 
 	 * @param userId
 	 */
-	@GetMapping("/{id}")
-	public void getUserById(@PathVariable("id") long userId) {
+	@GetMapping("read/{userId}")
+	public void getUserById(@PathVariable("userId") long userId) {
 		userService.getUserById(userId);
 	}
 	
@@ -91,8 +92,8 @@ public class UserController {
 	 * @param roles
 	 * @return roles
 	 */
-	@PutMapping("/{id}/roles")
-	public UserDto setRoles(@PathVariable("id") long userId, RoleInputDto roles) {
+	@PutMapping("/{userId}/roles")
+	public UserDto setRoles(@PathVariable("userId") long userId, RoleInputDto roles) {
 		AppUser user = userService.setRolesForUser(userId, roles.roles);
 		return new UserDto(user);
 	}

@@ -1,31 +1,56 @@
 package ch.zli.m223.ksh18a.mia.crm.model;
 
-import java.time.LocalDateTime;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+@Entity(name="Termin")
 public class TerminImpl implements Termin {
 
+	// variables 
+	
+	@Id @GeneratedValue
+	private Long id;
+	private String beschreibung;
+	@DateTimeFormat(pattern = "dd.mm.yyyy")
+	private String date;
+
+	public TerminImpl(String beschreibung, String date) {
+		this.setBeschreibung(beschreibung);
+		this.setDate(date);
+	}
+	
 	@Override
 	public Long getId() {
-		// TODO Auto-generated method stub
-		return null;
+		return id;
 	}
 
 	@Override
-	public String beschreibung() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getBeschreibung() {
+		return beschreibung;
 	}
 
 	@Override
-	public LocalDateTime datum() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getDate() {
+		return date;
 	}
 
-	@Override
-	public AppUser getUser() {
-		// TODO Auto-generated method stub
-		return null;
+	/**
+	 * 
+	 * @param beschreibung
+	 */
+	public void setBeschreibung(String beschreibung) {
+		this.beschreibung = beschreibung;
+	}
+
+	/**
+	 * 
+	 * @param date
+	 */
+	public void setDate(String date) {
+		this.date = date;
 	}
 
 }

@@ -24,7 +24,14 @@ public interface AppUser extends UserDetails {
 	/**
 	 * gets roles of user
 	 * 
-	 * @return roles
+	 * @return list of roles
 	 */
 	public List<String> getRoles();
+
+	/**
+	 * get termine of user
+	 * 
+	 * @return list of termine
+	 */
+	public List<Termin> getTermine();
 }

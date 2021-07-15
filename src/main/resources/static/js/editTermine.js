@@ -23,7 +23,7 @@ $(document).ready(
 		 * listener for button [abbrechen], redirects to gehege
 		 */
 		$("#cancel").click(function () {
-			/*window.location.href = "./index.html";*/
+			window.location.href = "./index.html";
 		});
 	}
 );
@@ -38,7 +38,7 @@ function loadTermin() {
 
 	if (terminId !== null && terminId != -1) {
 		$.ajax({
-			url: "./rest/v1/termine/read?terminId=" + terminId,
+			url: "./rest/v1/termin/read?terminId=" + terminId,
 			type: "GET",
 			dataType: "json"
 		})
@@ -47,11 +47,11 @@ function loadTermin() {
 
 		.fail(function (xhr, status, errorThrown) {
 			if (xhr.status == 403) {
-				window.location.href = "./";
+				window.location.href = "./index.html";
 			} else if (xhr.status == 404) {
 				$("#message").text("Keine Termine gefunden");
 			} else {
-				/*window.location.href = "./index.html";*/
+				window.location.href = "./ediTermine.html";
 			}
 		})
 	}
@@ -76,7 +76,7 @@ function saveTermin(form) {
 	form.preventDefault();
 	var terminId = $("#terminId").val();
 
-	var url = "./rest/v1/termine/";
+	var url = "./rest/v1/termin/";
 	var type = "";
 
 	if (terminId) {

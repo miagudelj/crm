@@ -39,6 +39,7 @@ public class AppUserImpl implements AppUser {
 	@ElementCollection(fetch = FetchType.EAGER)
 	// For simple types only, no Role objects allowed
 	private Set<String> roles;
+	@ElementCollection(fetch = FetchType.EAGER)
 	private Set<Termin> termine;
 
 	

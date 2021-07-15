@@ -11,10 +11,11 @@ public class TerminImpl implements Termin {
 
 	// variables 
 	
-	@Id @GeneratedValue
+	@Id 
+	@GeneratedValue
 	private Long id;
 	private String beschreibung;
-	@DateTimeFormat(pattern = "dd.mm.yyyy")
+	@DateTimeFormat(style = "dd.mm.yyyy")
 	private String date;
 
 	public TerminImpl(String beschreibung, String date) {
@@ -41,6 +42,7 @@ public class TerminImpl implements Termin {
 	 * 
 	 * @param beschreibung
 	 */
+	@Override
 	public void setBeschreibung(String beschreibung) {
 		this.beschreibung = beschreibung;
 	}
@@ -49,6 +51,7 @@ public class TerminImpl implements Termin {
 	 * 
 	 * @param date
 	 */
+	@Override
 	public void setDate(String date) {
 		this.date = date;
 	}

@@ -39,6 +39,12 @@ public interface UserRepository extends CrudRepository<AppUserImpl, Long> {
 	 */
 	public Optional<AppUser> getByUserName(String userName);
 
+	/**
+	 * 
+	 * @param user
+	 * @param roles
+	 * @return
+	 */
 	default AppUser setRoles(AppUser user, List<String> roles) {
 		return save((AppUserImpl) user).setRoles(roles);
 	}

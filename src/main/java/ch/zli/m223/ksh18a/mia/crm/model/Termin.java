@@ -5,7 +5,7 @@ package ch.zli.m223.ksh18a.mia.crm.model;
 
 /**
  * @author Mia Gudelj
- * @since 13-07-2021
+ * @since 15-07-2021
  */
 
 public interface Termin {
@@ -28,4 +28,8 @@ public interface Termin {
 	 * @return
 	 */
 	public String getDate();
+	
+	public void setBeschreibung(String beschreibung);
+	
+	public void setDate(String date);
 }

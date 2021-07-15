@@ -36,6 +36,21 @@ public class UserServiceImpl implements UserService {
 	} // end of getAllUsers
 
 	@Override
+	public AppUser getUserById(long userId) {
+
+		return userRepository.findById(userId).orElseThrow(UserNotFoundException::new);
+	} // end of getUserById
+
+	@Override
+	public AppUser getByUserName(String userName) {
+		if (userName == null) {
+			// TODO: better exception
+			throw new UserNotFoundException();
+		}
+		return userRepository.getByUserName(userName).orElseThrow(() -> new RuntimeException("User not found"));
+	} // end of findByUserName
+
+	@Override
 	public AppUser addUser(String userName, String password, List<String> role, List<Termin> termin) {
 		// check parameter
 		if (userName == null || password == null) {
@@ -53,21 +68,6 @@ public class UserServiceImpl implements UserService {
 		getUserById(userId);
 		userRepository.deleteById(userId);
 	} // end of deleteUserById
-
-	@Override
-	public AppUser getByUserName(String userName) {
-		if (userName == null) {
-			// TODO: better exception
-			throw new UserNotFoundException();
-		}
-		return userRepository.getByUserName(userName).orElseThrow(() -> new RuntimeException("User not found"));
-	} // end of findByUserName
-
-	@Override
-	public AppUser getUserById(long userId) {
-
-		return userRepository.findById(userId).orElseThrow(UserNotFoundException::new);
-	} // end of getUserById
 
 	@Override
 	public AppUser setRolesForUser(long userId, List<String> roles) {

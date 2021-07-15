@@ -34,7 +34,7 @@ function loadTermine() {
 
     .fail(function (xhr, status, errorThrown) {
         if (xhr.status == 403) {
-          	window.location.href("./");
+          /*  window.location.href("./index.html");*/
         } else if (xhr.status == 404) {
             $("#message").text("keine termine vorhanden");
         }else {
@@ -55,7 +55,7 @@ function showTermine(terminData) {
         tableData += `<tr>`;
         tableData += `<td> ${termin.beschreibung}</td>`;
         tableData += `<td> ${termin.datum}</td>`;
-        tableData += `<td> ${user.username}</td>`;
+        tableData += `<td> ${termin.user.username}</td>`;
 
         if (Cookies.get("userRole") == "admin") {
             tableData += "<td><a class='btn' role='button' href='./editTermin.html?terminId=" + terminId + "'>Bearbeiten</a></td>";

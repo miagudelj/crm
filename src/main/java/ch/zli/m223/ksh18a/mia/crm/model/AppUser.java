@@ -34,4 +34,5 @@ public interface AppUser extends UserDetails {
 	 * @return list of termine
 	 */
 	public List<Termin> getTermine();
+	public void addTermin(TerminImpl termin);
 }

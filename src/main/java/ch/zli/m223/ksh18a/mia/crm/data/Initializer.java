@@ -12,6 +12,8 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import ch.zli.m223.ksh18a.mia.crm.model.AppUser;
+import ch.zli.m223.ksh18a.mia.crm.model.AppUserImpl;
+import ch.zli.m223.ksh18a.mia.crm.model.TerminImpl;
 import ch.zli.m223.ksh18a.mia.crm.repository.UserRepository;
 import ch.zli.m223.ksh18a.mia.crm.role.AppRoles;
 
@@ -51,6 +53,7 @@ public class Initializer implements ApplicationRunner {
 		AppUser mia = userRepository.createUser("Mia", "mia", admin);
 		AppUser nici = userRepository.createUser("Nici", "nici", usemin);
 		
+		mia.addTermin(new TerminImpl((AppUserImpl)mia, "Testzentrum", "16.20.2021"));
 
 	}
 }

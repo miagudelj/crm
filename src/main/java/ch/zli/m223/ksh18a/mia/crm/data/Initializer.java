@@ -48,8 +48,8 @@ public class Initializer implements ApplicationRunner {
 		termin2.add(new TerminImpl("Impfen", "06.07.2021"));
 		termin2.add(new TerminImpl("Zahnarzt", "21.07.2021"));
 		
-		userRepository.createUser("Max", "max", user, termin1);
-		userRepository.createUser("Mia", "mia", admin, termin2);
-		userRepository.createUser("Nici", "nici", usemin, termin2);
+		userRepository.createUser("Max", "max", user);
+		userRepository.createUser("Mia", "mia", admin);
+		userRepository.createUser("Nici", "nici", usemin);
 	}
 }

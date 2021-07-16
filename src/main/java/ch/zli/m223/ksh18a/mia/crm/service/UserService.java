@@ -6,7 +6,6 @@ package ch.zli.m223.ksh18a.mia.crm.service;
 import java.util.List;
 
 import ch.zli.m223.ksh18a.mia.crm.model.AppUser;
-import ch.zli.m223.ksh18a.mia.crm.model.Termin;
 
 /**
  * @author Mia Gudelj
@@ -30,7 +29,7 @@ public interface UserService {
 	 * @param roles
 	 * @return user
 	 */
-	public AppUser addUser(String userName, String password, List<String> roles, List<Termin> termine);
+	public AppUser addUser(String userName, String password, List<String> roles);
 
 	/**
 	 * deletes a user by id 

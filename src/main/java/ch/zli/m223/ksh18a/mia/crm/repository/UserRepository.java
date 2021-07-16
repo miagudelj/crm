@@ -10,7 +10,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import ch.zli.m223.ksh18a.mia.crm.model.AppUser;
 import ch.zli.m223.ksh18a.mia.crm.model.AppUserImpl;
-import ch.zli.m223.ksh18a.mia.crm.model.Termin;
 
 /**
  * @author Mia Gudelj
@@ -26,8 +25,8 @@ public interface UserRepository extends CrudRepository<AppUserImpl, Long> {
 	 * @param role
 	 * @return user
 	 */
-	default AppUser createUser(String userName, String password, List<String> role, List<Termin> termine) {
-		return save(new AppUserImpl(userName, password, role, termine));
+	default AppUser createUser(String userName, String password, List<String> role) {
+		return save(new AppUserImpl(userName, password, role));
 
 	}
 

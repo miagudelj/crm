@@ -13,7 +13,6 @@ import ch.zli.m223.ksh18a.mia.crm.exception.InvalidArgumentsException;
 import ch.zli.m223.ksh18a.mia.crm.exception.UserAlreadyExistsException;
 import ch.zli.m223.ksh18a.mia.crm.exception.UserNotFoundException;
 import ch.zli.m223.ksh18a.mia.crm.model.AppUser;
-import ch.zli.m223.ksh18a.mia.crm.model.Termin;
 import ch.zli.m223.ksh18a.mia.crm.repository.UserRepository;
 
 /**
@@ -51,7 +50,7 @@ public class UserServiceImpl implements UserService {
 	} // end of findByUserName
 
 	@Override
-	public AppUser addUser(String userName, String password, List<String> role, List<Termin> termin) {
+	public AppUser addUser(String userName, String password, List<String> role) {
 		// check parameter
 		if (userName == null || password == null) {
 			throw new InvalidArgumentsException();
@@ -60,7 +59,7 @@ public class UserServiceImpl implements UserService {
 		if (userRepository.getByUserName(userName).isPresent()) {
 			throw new UserAlreadyExistsException();
 		}
-		return userRepository.createUser(userName, password, role == null ? new ArrayList<>() : role,  termin == null ? new ArrayList<>() : termin);
+		return userRepository.createUser(userName, password, role == null ? new ArrayList<>() : role);
 	} // end of addUser
 
 	@Override

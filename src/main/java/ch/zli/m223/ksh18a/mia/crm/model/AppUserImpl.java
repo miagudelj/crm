@@ -15,6 +15,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -26,7 +27,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  */
 
 @SuppressWarnings("serial")
-@Entity(name = "User")
+@Entity(name = "AppUser")
 //@Table
 public class AppUserImpl implements AppUser {
 
@@ -39,8 +40,9 @@ public class AppUserImpl implements AppUser {
 	@ElementCollection(fetch = FetchType.EAGER)
 	// For simple types only, no Role objects allowed
 	private Set<String> roles;
-	@ElementCollection(fetch = FetchType.EAGER)
-	private Set<Termin> termine;
+	
+	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+	private List<TerminImpl> termine;
 
 	
 	/**
@@ -49,11 +51,11 @@ public class AppUserImpl implements AppUser {
 	 * @param userName
 	 * @param password
 	 */
-	public AppUserImpl(String userName, String password, List<String> roles, List<Termin> termine) {
+	public AppUserImpl(String userName, String password, List<String> roles) { //, List<Termin> termine) {
 		this.userName = userName;
 		this.setPassword(password);
 		this.setRoles(roles);
-		this.setTermine(termine);
+		this.termine = new ArrayList<>();
 	} // end of AppUserImpl
 	
 	/**
@@ -128,14 +130,14 @@ public class AppUserImpl implements AppUser {
 		return this;
 	} // end of setRoles
 	 
-	/** 
-	  * sets roles of the user into a hash
-	  * 
-	  * @param roles
-	  * @return userImplementation
-	  */
-	public AppUserImpl setTermine(List<Termin> termine) {
-		this.termine = new HashSet<>(termine);
-		return this;
-	} // end of setRoles
+//	/** 
+//	  * sets roles of the user into a hash
+//	  * 
+//	  * @param roles
+//	  * @return userImplementation
+//	  */
+//	public AppUserImpl setTermine(List<Termin> termine) {
+//		this.termine = new ArrayList<>(termine);
+//		return this;
+//	} // end of setRoles
 }

@@ -58,8 +58,7 @@ public class UserController {
 		return (UserDto) userService.addUser(
 				userInput.userName, 
 				userInput.password,
-				userInput.roles,
-				userInput.termine);
+				userInput.roles);
 		// TODO
 	}
 

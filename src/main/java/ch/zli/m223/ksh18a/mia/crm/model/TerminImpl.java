@@ -3,6 +3,7 @@ package ch.zli.m223.ksh18a.mia.crm.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -17,6 +18,10 @@ public class TerminImpl implements Termin {
 	private String beschreibung;
 	@DateTimeFormat(style = "dd.mm.yyyy")
 	private String date;
+	@ManyToOne
+	private AppUserImpl user;
+	
+	protected TerminImpl() {}
 
 	public TerminImpl(String beschreibung, String date) {
 		this.setBeschreibung(beschreibung);

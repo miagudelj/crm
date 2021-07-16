@@ -130,6 +130,9 @@ public class AppUserImpl implements AppUser {
 		return this;
 	} // end of setRoles
 
+	/**
+	 * 
+	 */
 	public void addTermin(TerminImpl termin) {
 		this.termine.add(termin);
 	}

@@ -23,9 +23,10 @@ public class TerminImpl implements Termin {
 	
 	protected TerminImpl() {}
 
-	public TerminImpl(String beschreibung, String date) {
+	public TerminImpl(AppUserImpl user, String beschreibung, String date) {
 		this.setBeschreibung(beschreibung);
 		this.setDate(date);
+		this.user = user;
 	}
 	
 	@Override

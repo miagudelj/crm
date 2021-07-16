@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.zli.m223.ksh18a.mia.crm.model.AppUser;
+import ch.zli.m223.ksh18a.mia.crm.model.Termin;
 import ch.zli.m223.ksh18a.mia.crm.service.UserService;
 
 /**
@@ -96,5 +97,10 @@ public class UserController {
 		AppUser user = userService.setRolesForUser(userId, roles.roles);
 		return new UserDto(user);
 	}
-
+	
+	@PutMapping("/{userId}/termine")
+	public TerminDto addTermine(@PathVariable("userId") long userId, @RequestBody TerminInputDto terminDto) {
+		Termin termin = userService.addTerminToUser(userId, terminDto.beschreibung, terminDto.date);
+		return new TerminDto(termin);
+	}
 }

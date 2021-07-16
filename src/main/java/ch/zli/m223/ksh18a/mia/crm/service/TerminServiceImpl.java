@@ -37,15 +37,15 @@ public class TerminServiceImpl implements TerminService {
 		return terminRepository.findById(terminId).orElseThrow(UserNotFoundException::new);
 	} // end of getTerminById
 
-	@Override
-	public Termin addTermin(String beschreibung, String date) {
-		return terminRepository.createTermin(beschreibung, date);
-	} // end of addTermin
-
-	@Override
-	public void deleteTerminById(long terminId) {
-		getTerminById(terminId);
-		terminRepository.deleteById(terminId);
-	} // end of deleteTerminById
+//	@Override
+//	public Termin addTermin(String beschreibung, String date) {
+//		return terminRepository.addTermin(beschreibung, date);
+//	} // end of addTermin
+//
+//	@Override
+//	public void deleteTerminById(long terminId) {
+//		getTerminById(terminId);
+//		terminRepository.deleteById(terminId);
+//	} // end of deleteTerminById
 
 }

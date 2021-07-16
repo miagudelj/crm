@@ -13,6 +13,9 @@ import ch.zli.m223.ksh18a.mia.crm.exception.InvalidArgumentsException;
 import ch.zli.m223.ksh18a.mia.crm.exception.UserAlreadyExistsException;
 import ch.zli.m223.ksh18a.mia.crm.exception.UserNotFoundException;
 import ch.zli.m223.ksh18a.mia.crm.model.AppUser;
+import ch.zli.m223.ksh18a.mia.crm.model.AppUserImpl;
+import ch.zli.m223.ksh18a.mia.crm.model.Termin;
+import ch.zli.m223.ksh18a.mia.crm.repository.TerminRepository;
 import ch.zli.m223.ksh18a.mia.crm.repository.UserRepository;
 
 /**
@@ -24,6 +27,8 @@ import ch.zli.m223.ksh18a.mia.crm.repository.UserRepository;
 public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserRepository userRepository;
+	@Autowired 
+	private TerminRepository terminRepository;
 
 	@Override
 	public List<AppUser> getAllUsers() {
@@ -76,5 +81,13 @@ public class UserServiceImpl implements UserService {
 		AppUser user = getUserById(userId);
 		return userRepository.setRoles(user, roles);
 	} // end of setRolesForuser
+
+	@Override
+	public Termin addTerminToUser(long userId, String beschreibung, String date) {
+		AppUser user = userRepository.findById(userId).orElse(null);
+		if (user == null) { return null; }
+		
+		return terminRepository.addTermin((AppUserImpl)user, beschreibung, date);
+	}
 
 }

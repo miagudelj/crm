@@ -6,6 +6,7 @@ package ch.zli.m223.ksh18a.mia.crm.service;
 import java.util.List;
 
 import ch.zli.m223.ksh18a.mia.crm.model.AppUser;
+import ch.zli.m223.ksh18a.mia.crm.model.Termin;
 
 /**
  * @author Mia Gudelj
@@ -62,5 +63,14 @@ public interface UserService {
 	 * @return user
 	 */
 	public AppUser setRolesForUser(long userId, List<String> roles);
+
+	/**
+	 * 
+	 * @param userId
+	 * @param date
+	 * @param beschreibung
+	 * @return
+	 */
+	public Termin addTerminToUser(long userId, String beschreibung, String date);
 
 }

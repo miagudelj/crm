@@ -25,7 +25,7 @@ $(document).ready(
 function loadTermine() {
 
     $.ajax({
-        url: "./rest/v1/termin/list",
+        url: "./rest/v1/users/list",
         type: "GET",
         dataType: "json"
     })
@@ -50,19 +50,19 @@ function showTermine(terminData) {
 
     var tableData = "";
 
-    $.each(terminData, function (terminId, termin) {
+    $.each(terminData, function (userId, user) {
 
         tableData += `<tr>`;
-        tableData += `<td> ${termin.beschreibung}</td>`;
-        tableData += `<td> ${termin.datum}</td>`;
+        tableData += `<td> ${user.termin.beschreibung}</td>`;
+        tableData += `<td> ${user.termin.datum}</td>`;
         tableData += `<td> ${user.username}</td>`;
 
         if (Cookies.get("userRole") == "admin") {
-            tableData += "<td><a class='btn' role='button' href='./editTermin.html?terminId=" + terminId + "'>Bearbeiten</a></td>";
-            tableData += "<td><button class='btn' type='button' id='delete_" + terminId + "' value='" + terminId + "'>Löschen</button></td>";
+            tableData += "<td><a class='btn' role='button' href='./editTermin.html?userId=" + userId + "'>Bearbeiten</a></td>";
+            tableData += "<td><button class='btn' type='button' id='delete_" + userId + "' value='" + userId + "'>Löschen</button></td>";
 
         } else {
-            tableData += "<td><a href='./editTermin.html?terminId=" + terminId + "'>Ansehen</a></td>";
+            tableData += "<td><a href='./editTermin.html?userId=" + userId + "'>Ansehen</a></td>";
 
         }
         tableData += "</tr>";

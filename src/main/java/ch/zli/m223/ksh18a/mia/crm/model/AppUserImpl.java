@@ -129,6 +129,10 @@ public class AppUserImpl implements AppUser {
 		this.roles = new HashSet<>(roles);
 		return this;
 	} // end of setRoles
+
+	public void addTermin(TerminImpl termin) {
+		this.termine.add(termin);
+	}
 	 
 //	/** 
 //	  * sets roles of the user into a hash

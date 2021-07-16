@@ -5,7 +5,12 @@
     <meta name="author" content="Mia Gudelj"/>
     <meta name="copyright" content="Mia Gudelj"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
+	
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css" crossorigin="anonymous">
 
@@ -19,13 +24,13 @@
     <title>Termin bearbeiten</title>
 </head>
 
-<body class="tieredit">
+<body class="terminEdit">
 
 <header>
     <h1>Tier bearbeiten</h1>
 
-    <nav class="navbar navbar-expand-sm ">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <nav class="navbar navbar-expand-lg ">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link disabled" id="userRole" href="#"></a>
             </li>
@@ -34,7 +39,7 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <button type="submit" class="btn" id="logout">Logout</button>
+            <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="logout">Logout</button>
         </form>
     </nav>
 </header>
@@ -45,30 +50,19 @@
         <form class="form" id="terminEditForm" name="terminEdit">
             <div class="form-group row">
                 <label class="col-sm-2">Beschreibung</label>
-                <input class="form-control col-sm-4" id="beschreibung" name="beschreibung" type="text" maxlength="150" required>
+                <textarea class="form-control col-sm-6" id="beschreibung" name="beschreibung" rows="3" maxlength="150" required></textarea>
             </div>
 
             <div class="form-group row">
                 <label class="col-sm-2">Datum</label>
-                <input class="form-control col-sm-2" id="datum" name="datum" type="text"
+                <input class="form-control col-sm-2" id="datum" name="datum" type="date"
                        placeholder="dd/mm/yyyy" maxlength="10" required>
             </div>
 
             <div class="form-group row">
-                <label class="col-sm-2">Username</label>
-                <input class="form-control col-sm-4" id="username" name="username" type="text" maxlength="30" required>
-                <input id="userId" name="userId" type="text" hidden/>
-            </div>
-            
-            <div class="form-group row">
-                <label class="col-sm-2">User</label>
-                <select class="form-control col-sm-6" id="user" name="userId" required></select>
-            </div>
-
-            <div class="form-group row">
-                <button class="btn col-sm-1.5" id="save" type="submit" value="Speichern">Speichern</button>
-                <button class="btn col-sm-1.5" id="cancel" type="button" value="Abbrechen">Abbrechen</button>
-                <button class="btn col-sm-1.5" id="reset" type="reset" value="Zurücksetzen">Zurücksetzen</button>
+                <button class="btn col-sm-2" id="save" type="submit" value="Speichern">Speichern</button>
+                <button class="btn col-sm-2" id="cancel" type="button" value="Abbrechen">Abbrechen</button>
+                <button class="btn col-sm-2" id="reset" type="reset" value="Zurücksetzen">Zurücksetzen</button>
             </div>
         </form>
     </div>

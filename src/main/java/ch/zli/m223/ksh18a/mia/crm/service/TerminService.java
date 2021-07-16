@@ -33,13 +33,13 @@ public interface TerminService {
 	 * @param date
 	 * @return termin
 	 */
-	public Termin addTermin(String beschreibung, String date);
-
-	/**
-	 * deletes a termin by id 
-	 * 
-	 * @param userId
-	 */
-	public void deleteTerminById(long terminId);
+//	public Termin addTermin(String beschreibung, String date);
+//
+//	/**
+//	 * deletes a termin by id 
+//	 * 
+//	 * @param userId
+//	 */
+//	public void deleteTerminById(long terminId);
 
 }

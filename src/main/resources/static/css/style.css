@@ -1,14 +1,14 @@
 body {
-	background-color: black !important;
+	background-color: white !important;
 	background-image: url("../img/flower-calender.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
 	background-size: 100%;
 	
-	font-family: "Comic Sans MS", cursive, sans-serif !important;
-	color: white !important;
-	font-size: 100% !important;
+	font-family: 'Zen Loop', cursive !important;
+	color: Black !important;
+	font-size: 1.5vw !important;
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
 
 h1 {
 	text-align: center;
-	background-color: black;
+	background-color: white;
 	opacity: 0.5;
 	/*margin-left: -9% !important;
 	margin-right: -9% !important;*/
@@ -29,9 +29,7 @@ h1 {
 
 .navbar {
 	background-color: transparent !important;
-	color: #cfb997;
-	/*margin-left: -7.5% !important;
-	margin-right: -7.5% !important;*/
+	color: #dcbbdb;
 }
 
 /* loginpage */
@@ -44,16 +42,17 @@ h1 {
 	margin-top: 5%;
 	margin-bottom: auto;
 	width: 50%;
-	background-color: rgba(207, 185, 151,0.5) !important;
+	background-color: rgba(220, 187, 219, 0.5) !important;
 }
 
 .card-header h3{
 	color: white;
 }
 
+
 .input-group-prepend span{
-	background-color: #cfb997;
-	color: black;
+	background-color: #dcbbdb;
+	color: white;
 	border: 0 !important;
 }
 
@@ -73,28 +72,27 @@ input:focus{
 	margin-right: 1%;
 }
 
-.btn, textarea, select, .tieredit input, .tieredit #alter {
+.btn, textarea, select, .terminEdit input, .terminEdit #alter {
 	background-color: white !important;
 	border-color: lightgray !important;
-	margin-bottom: 2.5% !important;
-	margin-right: 1% !important;
-	opacity: 0.6;
+	margin: 1vw !important;
+	opacity: 0.8;
+	font-size: 1.3vw !important;
 }
 .btn:hover {
 	opacity: 1;
-	background-color: #cfb997 !important;
+	background-color: #dcbbdb !important;
 	color: white !important;
 }
- textarea:hover, select:hover, .tieredit input:hover, .tieredit #alter:hover {
+ textarea:hover, select:hover, .terminEdit input:hover, .terminEdit #alter:hover {
 	opacity: 1;
 }
 
 #logout {
-	float: right;
-	margin-right: -15% !important;
+	margin-right: 55% !important;
 }
 #logout:hover {
-	background-color: saddlebrown !important;
+	background-color: #dcbbdb !important;
 }
 
 form {
@@ -106,13 +104,15 @@ form {
 }
 
 /*gehege*/
+.table {
+	font-size: 1.5vw !important;
+	opacity: 0.8;
+}
 thead {
-	background-color: #cfb997;
-	margin-left: auto;
+	background-color: #dcbbdb;
 }
 tbody {
-	background-color: black;
-	color: white;
-	opacity: 0.7;
-	border: black solid 2px;
+	background-color: white;
+	color: black;
+	border: #dcbbdb solid 2px;
 }
